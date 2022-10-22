@@ -15,14 +15,14 @@ describe('Testes do componente Pokedex.js', () => {
   it('Os botões de filtragem por tipo possuem o nome correto', () => {
     renderWithRouter(<App />);
 
-    const button = screen.getAllByRole('button');
-    expect(button[1]).toHaveTextContent('Electric');
-    expect(button[2]).toHaveTextContent('Fire');
-    expect(button[3]).toHaveTextContent('Bug');
-    expect(button[4]).toHaveTextContent('Poison');
-    expect(button[5]).toHaveTextContent('Psychic');
-    expect(button[6]).toHaveTextContent('Normal');
-    expect(button[7]).toHaveTextContent('Dragon');
+    const button = screen.getAllByTestId('pokemon-type-button');
+    expect(button[0]).toHaveTextContent('Electric');
+    expect(button[1]).toHaveTextContent('Fire');
+    expect(button[2]).toHaveTextContent('Bug');
+    expect(button[3]).toHaveTextContent('Poison');
+    expect(button[4]).toHaveTextContent('Psychic');
+    expect(button[5]).toHaveTextContent('Normal');
+    expect(button[6]).toHaveTextContent('Dragon');
   });
 
   it('É possível clicar no botão de filtragem All', () => {
